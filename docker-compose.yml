@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.7.8
+    ports:
+      - 5672:5672
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+
+networks:
+  default:
+    name: ai-network

@@ -1,0 +1,6 @@
+[submodule "med-ai-server"]
+	path = med-ai-server
+	url = git@github.com:tclarke104/med-ai-server.git
+[submodule "med-ai-runner"]
+	path = med-ai-runner
+	url = git@github.com:tclarke104/med-ai-runner.git
