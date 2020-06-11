@@ -10,3 +10,6 @@
 [submodule "med-ai-model-example"]
 	path = med-ai-model-example
 	url = git@github.com:tclarke104/med-ai-model-example.git
+[submodule "med-ai-model"]
+	path = med-ai-model
+	url = git@github.com:tclarke104/med-ai-model.git
