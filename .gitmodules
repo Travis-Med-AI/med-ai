@@ -13,3 +13,6 @@
 [submodule "med-ai-model"]
 	path = med-ai-model
 	url = git@github.com:tclarke104/med-ai-model.git
+[submodule "med-ai-dummy-classifier"]
+	path = med-ai-dummy-classifier
+	url = git@github.com:tclarke104/med-ai-dummy-classifier.git
