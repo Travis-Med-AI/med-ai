@@ -19,3 +19,6 @@
 [submodule "med-ai-cxr-classifier"]
 	path = med-ai-cxr-classifier
 	url = git@github.com:tclarke104/med-ai-cxr-classifier.git
+[submodule "med-ai-model-ptx"]
+	path = med-ai-model-ptx
+	url = git@github.com:tclarke104/med-ai-model-ptx.git
