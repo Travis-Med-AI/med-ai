@@ -90,3 +90,10 @@ docker run --runtime=nvidia nvidia/cuda:10.0-base nvidia-smi
 - The **jobs** tab allows you to evaluate all images in the dicom server using a given model
 - When a job is checked in this tab, the backend will check orthanc for studies that have not yet been evaluated, and will queue tasks to evaluate the studies
 - Results of job evaluations are shown on the **evals** tab
+
+## Troubleshooting
+### System Resources
+- Depending the specs of your machine, the current settings may be too high or too low
+#### Change Celery Concurrency
+- Celery concurrency (the number of worker threads allowed) can be changed in ```med-ai/med-ai-runner/app/settings.py``` 
+    - This can alleviate an overloaed GPU if decreased
