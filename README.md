@@ -9,6 +9,7 @@
 ```git lfs install```
 ### Setup Nvidia Runtime
 - Install docker from [here](https://docs.docker.com/engine/install/ubuntu/)
+    - Make sure to add user to the docker group ([more info](https://docs.docker.com/engine/install/linux-postinstall/))
 - Install nvidia drivers
 - Install nvidia runtime using commands below (more info [here](https://github.com/NVIDIA/nvidia-docker#quickstart))
 ``` 
