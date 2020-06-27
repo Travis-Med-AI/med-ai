@@ -55,7 +55,7 @@ docker run --runtime=nvidia nvidia/cuda:10.0-base nvidia-smi
 - ```./build.sh```
 ### Build ptx model image
 - Change directory to ptx model image and build
-- ```cd med-ai/med-ai-cxr-classifier```
+- ```cd med-ai/med-ai-model-ptx```
 - ```chmod +x ./build.sh```
 - ```./build.sh```
 ### Start project
