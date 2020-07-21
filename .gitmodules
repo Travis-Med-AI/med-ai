@@ -1,24 +1,18 @@
 [submodule "med-ai-server"]
 	path = med-ai-server
-	url = git@github.com:tclarke104/med-ai-server.git
+	url = git@github.com:Travis-Med-AI/med-ai-server.git
 [submodule "med-ai-runner"]
 	path = med-ai-runner
-	url = git@github.com:tclarke104/med-ai-runner.git
+	url = git@github.com:Travis-Med-AI/med-ai-runner.git
 [submodule "med-ai-ui"]
 	path = med-ai-ui
-	url = git@github.com:tclarke104/med-ai-ui.git
-[submodule "med-ai-model-example"]
-	path = med-ai-model-example
-	url = git@github.com:tclarke104/med-ai-model-example.git
+	url = git@github.com:Travis-Med-AI/med-ai-ui.git
 [submodule "med-ai-model"]
 	path = med-ai-model
-	url = git@github.com:tclarke104/med-ai-model.git
-[submodule "med-ai-dummy-classifier"]
-	path = med-ai-dummy-classifier
-	url = git@github.com:tclarke104/med-ai-dummy-classifier.git
+	url = git@github.com:Travis-Med-AI/med-ai-model.git
 [submodule "med-ai-cxr-classifier"]
 	path = med-ai-cxr-classifier
-	url = git@github.com:tclarke104/med-ai-cxr-classifier.git
+	url = git@github.com:Travis-Med-AI/med-ai-cxr-classifier.git
 [submodule "med-ai-model-ptx"]
 	path = med-ai-model-ptx
-	url = git@github.com:tclarke104/med-ai-model-ptx.git
+	url = git@github.com:Travis-Med-AI/med-ai-model-ptx.git
