@@ -4,9 +4,9 @@
 
 ## Installation
 ### Install git lfs
-```curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash```
-```sudo apt-get install git-lfs```
-```git lfs install```
+- ```curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash```
+- ```sudo apt-get install git-lfs```
+- ```git lfs install```
 ### Setup Nvidia Runtime
 - Install docker from [here](https://docs.docker.com/engine/install/ubuntu/)
     - Make sure to add user to the docker group ([more info](https://docs.docker.com/engine/install/linux-postinstall/))
