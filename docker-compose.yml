@@ -6,11 +6,11 @@ services:
           context: .
           dockerfile: ./dockerfiles/postgres.dockerfile
       volumes:
-          - postgres-volume:/var/lib/postgresql/data
+          - postgres-volume:/docker-entrypoint-initdb.d
       environment:
-          - POSTGRES_DB=ai
           - POSTGRES_USER=test
           - POSTGRES_PASSWORD=test
+          - POSTGRES_MULTIPLE_DATABASES=ai,orthanc
       ports:
           - "5432:5432"
   rabbitmq:
