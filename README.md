@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://gatsbyjs.org">
-    <img alt="Gatsby" src="logo.svg" width="60" />
+  <a href="https://travis-med-ai.github.io">
+    <img alt="Travis AI" src="logo.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
