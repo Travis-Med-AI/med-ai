@@ -15,10 +15,8 @@
 </p>
 <p align="center">
   <a href="https://github.com/travis-med-ai/med-ai/blob/master/LICENSE.md">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Travis Med AI is released under the MIT license." />
+    <img src="https://img.shields.io/badge/license-ASL-blue.svg" alt="Travis Med AI is released under the MIT license." />
   </a>
-  <a href="https://www.npmjs.org/package/gatsby">
-    <img src="https://img.shields.io/npm/v/gatsby.svg" alt="Current npm package version." />
   <a href="https://travis-med-ai.github.io/contributing/how-to-contribute/">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
   </a>
