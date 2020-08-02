@@ -14,7 +14,7 @@
   Travis Med AI is an open source AI framework based on Docker to help streamline machine learning integration into the clinic.
 </p>
 <p align="center">
-  <a href="https://github.com/gatsbyjs/gatsby/blob/master/LICENSE">
+  <a href="https://github.com/travis-med-ai/med-ai/blob/master/LICENSE.md">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Travis Med AI is released under the MIT license." />
   </a>
   <a href="https://www.npmjs.org/package/gatsby">
