@@ -25,7 +25,7 @@
 </p>
 
 <h3 align="center">
-  <a href="https://travis-med-ai.github.io/quickstart">Quickstart</a>
+  <a href="https://travis-med-ai.github.io/installation">Installation/Quickstart</a>
   <span> · </span>
   <a href="https://travis-med-ai.github.io/tutorial">Tutorial</a>
   <span> · </span>
