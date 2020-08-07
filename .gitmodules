@@ -16,3 +16,6 @@
 [submodule "med-ai-model-ptx"]
 	path = med-ai-model-ptx
 	url = git@github.com:Travis-Med-AI/med-ai-model-ptx.git
+[submodule "med-ai-logging"]
+	path = med-ai-logging
+	url = git@github.com:Travis-Med-AI/med-ai-logging.git
