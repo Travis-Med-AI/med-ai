@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 210 210"
+   height="210mm"
+   width="210mm">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="46"
+     inkscape:window-x="0"
+     inkscape:window-height="1458"
+     inkscape:window-width="2256"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="473.29549"
+     inkscape:cx="-16.268146"
+     inkscape:zoom="0.88"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       d="M 105.2056,0.5117429 A 104.75883,104.74471 0 0 0 0.53208528,105.25651 104.75883,104.74471 0 0 0 105.29107,210.00128 104.75883,104.74471 0 0 0 210.04946,105.25651 104.75883,104.74471 0 0 0 105.29107,0.5117429 a 104.75883,104.74471 0 0 0 -0.0855,0 z"
+       style="fill:#ffcc00;fill-rule:evenodd;stroke-width:0.312573"
+       id="path10" />
+    <text
+       id="text19"
+       y="122.50163"
+       x="161.34804"
+       style="font-style:normal;font-weight:normal;font-size:21.1667px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         rotate="0 0 0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.1667px;font-family:georgia;-inkscape-font-specification:georgia;stroke-width:0.264583"
+         y="122.50163"
+         x="161.34804"
+         id="tspan17"
+         sodipodi:role="line">AI</tspan></text>
+    <text
+       id="text23"
+       y="122.32304"
+       x="23.075689"
+       style="font-style:normal;font-weight:normal;font-size:50.8px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-size:50.8px;stroke-width:0.264583"
+         y="122.32304"
+         x="23.075689"
+         id="tspan21"
+         sodipodi:role="line">Travis</tspan></text>
+  </g>
+</svg>
