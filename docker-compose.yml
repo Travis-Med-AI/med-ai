@@ -1,4 +1,4 @@
-version: '3.5'
+version: '2.3'
 
 services:
   postgres-db:
@@ -7,6 +7,8 @@ services:
           dockerfile: ./dockerfiles/postgres.dockerfile
       volumes:
           - postgres-volume:/docker-entrypoint-initdb.d
+      restart: unless-stopped
+      
       environment:
           - POSTGRES_USER=test
           - POSTGRES_PASSWORD=test
@@ -15,6 +17,7 @@ services:
           - "5432:5432"
   rabbitmq:
     image: rabbitmq:3.8.5-management
+    restart: unless-stopped
     ports:
       - 5672:5672
       - 15671:15671
@@ -22,12 +25,54 @@ services:
 
   redis:
     image: redis
+    restart: unless-stopped
     ports:
       - 6379:6379
+
+  ui:
+    extends: 
+      file: './med-ai-ui/docker-compose.yml'
+      service: 'ai-ui'
+  server:
+    extends:
+      file: './med-ai-server/docker-compose.yml'
+      service: 'server'
+  beat:
+    extends:
+      file: './med-ai-runner/docker-compose.yml'
+      service: 'beat'
+  worker:
+    extends:
+      file: './med-ai-runner/docker-compose.yml'
+      service: 'worker'
+  orthanc:
+    extends:
+      file: './med-ai-runner/docker-compose.yml'
+      service: 'orthanc'
+  elasticsearch:
+    extends:
+      file: './med-ai-logging/docker-compose.yml'
+      service: 'elasticsearch'
+  logstash:
+    extends:
+      file: './med-ai-logging/docker-compose.yml'
+      service: 'logstash'
+  kibana:
+    extends:
+      file: './med-ai-logging/docker-compose.yml'
+      service: 'kibana'
 
 networks:
   default:
     name: ai-network
 volumes:
-    postgres-volume:
-        name: postgres-volume
+  ai-images:
+    name: ai-images
+  postgres-volume:
+    name: postgres-volume
+  orthanc-volume:
+    name: orthanc-volume
+  ai-images:
+    name: ai-images
+  elasticsearch:
+    name: elasticsearch
