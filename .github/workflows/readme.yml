@@ -26,7 +26,7 @@ jobs:
         mkdir repos
         git config --global user.name "Jacob Clarke"
         git config --global user.email "jacobclarke718@gmail.com"
-        for i in {med-ai-ui}
+        for i in {med-ai-ui, med-ai-models}
         do
         git clone https://${GITHUB_USER}:${{secrets.GHUB_TOKEN}}@github.com/Travis-Med-AI/$i repos/$i
         yes | cp -rf README.md repos/$i/README.md
