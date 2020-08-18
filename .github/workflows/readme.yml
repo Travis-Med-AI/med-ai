@@ -28,12 +28,16 @@ jobs:
         git config --global user.email "jacobclarke718@gmail.com"
         for i in {med-ai-ui,med-ai-models,travis-med-ai.github.io,med-ai-common,model-registry,med-ai-runner,med-ai-server,med-ai-model}
         do
-        git clone https://${GITHUB_USER}:${{secrets.GHUB_TOKEN}}@github.com/Travis-Med-AI/$i repos/$i
-        rm -rf repos/$i/README.md
-        cp README.md repos/$i/README.md
-        cd repos/$i
-        git add README.md
-        git commit -m "Updated Readme"
-        git push
-        cd ../..
+          git clone https://${GITHUB_USER}:${{secrets.GHUB_TOKEN}}@github.com/Travis-Med-AI/$i repos/$i
+          rm -rf repos/$i/README.md
+          cp README.md repos/$i/README.md
+          cd repos/$i
+          dif=$(git diff --name-only)
+          if [[ $dif =~ "README" ]]
+          then
+            git add README.md
+            git commit -m "Updated Readme"
+            git push
+          fi
+          cd ../..
         done
