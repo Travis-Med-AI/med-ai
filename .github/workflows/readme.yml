@@ -24,6 +24,8 @@ jobs:
       run: |
         export GITHUB_USER=j718
         mkdir repos
+        git config --global user.name "Jacob Clarke"
+        git config --global user.email "jacobclarke718@gmail.com"
         for i in {med-ai-ui,med-ai-logging}
         do
         git clone https://${GITHUB_USER}:${{GHUB_TOKEN}}@github.com/Travis-Med-AI/$i repos/$i
