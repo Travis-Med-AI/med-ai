@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://travis-med-ai.github.io">
-    <img alt="Travis AI" src="logo.svg" width="60" />
+    <img alt="Travis AI" src="https://raw.githubusercontent.com/Travis-Med-AI/med-ai/master/logo.svg" width="60" />
   </a>
 </p>
 <h1 align="center">
