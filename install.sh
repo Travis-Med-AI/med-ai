@@ -31,13 +31,13 @@ apt-get install -y\
     nvidia-container-runtime
 
 # add daemon.json
-dameon_json = '{
-    "runtimes": {
-        "nvidia": {
-            "path": "nvidia-container-runtime",
-            "runtimeArgs": []
-        }
-    }
+dameon_json = '{ \
+    "runtimes": { \
+        "nvidia": { \
+            "path": "nvidia-container-runtime", \
+            "runtimeArgs": [] \
+        } \
+    } \
 }'
 echo $dameon_json >> /etc/docker/daemon.json
 
