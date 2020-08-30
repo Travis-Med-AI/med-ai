@@ -18,6 +18,8 @@ services:
   rabbitmq:
     image: rabbitmq:3.8.5-management
     restart: unless-stopped
+    logging:
+      driver: "none"
     ports:
       - 5672:5672
       - 15671:15671
@@ -26,38 +28,66 @@ services:
   redis:
     image: redis
     restart: unless-stopped
+    logging:
+      driver: "none"
     ports:
       - 6379:6379
 
   ui:
+    restart: unless-stopped
     extends: 
       file: './med-ai-ui/docker-compose.yml'
       service: 'ai-ui'
   server:
+    restart: unless-stopped
+    depends_on: 
+      - rabbitmq
+      - redis
+      - postgres-db
     extends:
       file: './med-ai-server/docker-compose.yml'
       service: 'server'
   beat:
+    restart: unless-stopped
+    depends_on: 
+      - rabbitmq
+      - redis
+      - postgres-db
     extends:
       file: './med-ai-runner/docker-compose.yml'
       service: 'beat'
   worker:
+    restart: unless-stopped
+    depends_on: 
+      - rabbitmq
+      - redis
+      - postgres-db
     extends:
       file: './med-ai-runner/docker-compose.yml'
       service: 'worker'
   orthanc:
+    restart: unless-stopped
     extends:
       file: './med-ai-runner/docker-compose.yml'
       service: 'orthanc'
   elasticsearch:
+    restart: unless-stopped
+    logging:
+      driver: "none"
     extends:
       file: './med-ai-logging/docker-compose.yml'
       service: 'elasticsearch'
   logstash:
+    restart: unless-stopped
+    logging:
+      driver: "none"
     extends:
       file: './med-ai-logging/docker-compose.yml'
       service: 'logstash'
   kibana:
+    restart: unless-stopped
+    logging:
+      driver: "none"
     extends:
       file: './med-ai-logging/docker-compose.yml'
       service: 'kibana'
