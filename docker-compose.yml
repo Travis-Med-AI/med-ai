@@ -70,27 +70,27 @@ services:
     extends:
       file: './med-ai-runner/docker-compose.yml'
       service: 'orthanc'
-  elasticsearch:
-    restart: unless-stopped
-    logging:
-      driver: "none"
-    extends:
-      file: './med-ai-logging/docker-compose.yml'
-      service: 'elasticsearch'
-  logstash:
-    restart: unless-stopped
-    logging:
-      driver: "none"
-    extends:
-      file: './med-ai-logging/docker-compose.yml'
-      service: 'logstash'
-  kibana:
-    restart: unless-stopped
-    logging:
-      driver: "none"
-    extends:
-      file: './med-ai-logging/docker-compose.yml'
-      service: 'kibana'
+  # elasticsearch:
+  #   restart: unless-stopped
+  #   logging:
+  #     driver: "none"
+  #   extends:
+  #     file: './med-ai-logging/docker-compose.yml'
+  #     service: 'elasticsearch'
+  # logstash:
+  #   restart: unless-stopped
+  #   logging:
+  #     driver: "none"
+  #   extends:
+  #     file: './med-ai-logging/docker-compose.yml'
+  #     service: 'logstash'
+  # kibana:
+  #   restart: unless-stopped
+  #   logging:
+  #     driver: "none"
+  #   extends:
+  #     file: './med-ai-logging/docker-compose.yml'
+  #     service: 'kibana'
 
 networks:
   default:
