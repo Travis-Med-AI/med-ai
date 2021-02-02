@@ -3,6 +3,9 @@
 set -e
 set -u
 
+echo "initializing db"
+POSTGRES_MULTIPLE_DATABASES=( "orthanc" "ai" )
+POSTGRES_USER="test"
 
 function create_user_and_database() {
 	local database=$1

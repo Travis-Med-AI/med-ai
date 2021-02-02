@@ -6,7 +6,7 @@ services:
           context: .
           dockerfile: ./dockerfiles/postgres.dockerfile
       volumes:
-          - postgres-volume:/docker-entrypoint-initdb.d
+          - postgres-volume:/var/lib/postgresql/data
       restart: unless-stopped
       
       environment:
