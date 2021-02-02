@@ -98,11 +98,16 @@ networks:
 volumes:
   ai-images:
     name: ai-images
+    external: true
   postgres-volume:
     name: postgres-volume
+    external: true
   orthanc-volume:
     name: orthanc-volume
+    external: true
   ai-images:
     name: ai-images
+    external: true
   elasticsearch:
     name: elasticsearch
+    external: true
