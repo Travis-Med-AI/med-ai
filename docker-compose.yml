@@ -18,8 +18,8 @@ services:
   rabbitmq:
     image: rabbitmq:3.8.5-management
     restart: unless-stopped
-    logging:
-      driver: "none"
+    # logging:
+    #   driver: "none"
     ports:
       - 5672:5672
       - 15671:15671
@@ -56,6 +56,15 @@ services:
     extends:
       file: './med-ai-runner/docker-compose.yml'
       service: 'beat'
+  results:
+    restart: unless-stopped
+    depends_on: 
+      - rabbitmq
+      - redis
+      - postgres-db
+    extends:
+      file: './med-ai-runner/docker-compose.yml'
+      service: 'results'
   worker:
     restart: unless-stopped
     depends_on: 
@@ -65,6 +74,15 @@ services:
     extends:
       file: './med-ai-runner/docker-compose.yml'
       service: 'worker'
+  worker_gpu:
+    restart: unless-stopped
+    depends_on: 
+      - rabbitmq
+      - redis
+      - postgres-db
+    extends:
+      file: './med-ai-runner/docker-compose.yml'
+      service: 'worker_gpu'
   orthanc:
     restart: unless-stopped
     extends:
