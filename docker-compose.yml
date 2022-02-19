@@ -2,24 +2,25 @@ version: '2.3'
 
 services:
   postgres-db:
-      build:
-          context: .
-          dockerfile: ./dockerfiles/postgres.dockerfile
-      volumes:
-          - postgres-volume:/var/lib/postgresql/data
-      restart: unless-stopped
-      
-      environment:
-          - POSTGRES_USER=test
-          - POSTGRES_PASSWORD=test
-          - POSTGRES_MULTIPLE_DATABASES=ai,orthanc
-      ports:
-          - "5432:5432"
-  rabbitmq:
-    image: rabbitmq:3.8.5-management
+    build:
+      context: .
+      dockerfile: ./dockerfiles/postgres.dockerfile
+    volumes:
+      - postgres-volume:/var/lib/postgresql/data
     restart: unless-stopped
-    # logging:
-    #   driver: "none"
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_MULTIPLE_DATABASES=ai,orthanc
+    logging:
+      driver: "none"
+    ports:
+      - "5432:5432"
+  rabbitmq:
+    image: rabbitmq:3.9.3-management-alpine
+    restart: unless-stopped
+    logging:
+      driver: "none"
     ports:
       - 5672:5672
       - 15671:15671
@@ -49,6 +50,8 @@ services:
       service: 'server'
   beat:
     restart: unless-stopped
+    logging:
+      driver: "none"
     depends_on: 
       - rabbitmq
       - redis
@@ -85,6 +88,8 @@ services:
       service: 'worker_gpu'
   orthanc:
     restart: unless-stopped
+    logging:
+      driver: "none"
     extends:
       file: './med-ai-runner/docker-compose.yml'
       service: 'orthanc'
@@ -120,7 +125,5 @@ volumes:
     name: postgres-volume
   orthanc-storage:
     name: orthanc-storage
-  ai-images:
-    name: ai-images
   elasticsearch:
     name: elasticsearch
