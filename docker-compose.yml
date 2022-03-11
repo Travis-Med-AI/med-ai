@@ -19,6 +19,8 @@ services:
   rabbitmq:
     image: rabbitmq:3.9.3-management-alpine
     restart: unless-stopped
+    depends_on: 
+      - postgres-db
     logging:
       driver: "none"
     ports:
@@ -29,6 +31,8 @@ services:
   redis:
     image: redis
     restart: unless-stopped
+    depends_on: 
+      - postgres-db
     logging:
       driver: "none"
     ports:
@@ -93,6 +97,13 @@ services:
     extends:
       file: './med-ai-runner/docker-compose.yml'
       service: 'orthanc'
+  orthanc-public:
+    restart: unless-stopped
+    logging:
+      driver: "none"
+    extends:
+      file: './med-ai-runner/docker-compose.yml'
+      service: 'orthanc-public'
   # elasticsearch:
   #   restart: unless-stopped
   #   logging:
