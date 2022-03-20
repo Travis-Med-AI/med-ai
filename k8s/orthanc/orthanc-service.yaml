@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (HEAD)
+  labels:
+    io.kompose.service: orthanc
+  name: orthanc
+spec:
+  ports:
+    - name: "8042"
+      port: 8042
+      targetPort: 8042
+    - name: "4242"
+      port: 4242
+      targetPort: 4242
+  selector:
+    io.kompose.service: orthanc
+status:
+  loadBalancer: {}

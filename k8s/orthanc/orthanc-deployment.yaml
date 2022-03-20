@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: orthanc
+  name: orthanc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: orthanc
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.0 (HEAD)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: orthanc
+    spec:
+      containers:
+        - image: tclarke104/med-ai-orthanc:0.1
+          name: orthanc
+          ports:
+            - containerPort: 8042
+            - containerPort: 4242
+          resources: {}
+          volumeMounts:
+            - mountPath: /var/lib/orthanc/db
+              name: medai-orthanc-storage
+      restartPolicy: Always
+      volumes:
+        - name: medai-orthanc-storage
+          persistentVolumeClaim:
+            claimName: medai-orthanc-storage
+status: {}

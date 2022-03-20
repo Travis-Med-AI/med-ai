@@ -45,7 +45,6 @@ services:
       - rabbitmq
       - redis
       - postgres-db
-    runtime: nvidia
     ports:
         - 8000:8000
     environment: 

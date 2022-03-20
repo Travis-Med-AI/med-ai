@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (HEAD)
+  labels:
+    io.kompose.service: beat
+  name: beat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: beat
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.0 (HEAD)
+      labels:
+        io.kompose.service: beat
+    spec:
+      containers:
+        - image: tclarke104/med-ai-runner-beat:0.1
+          imagePullPolicy: Never
+          name: beat
+          resources: {}
+          volumeMounts:
+            - mountPath: /opt/images
+              name: medai-ai-images
+      restartPolicy: Always
+      volumes:
+        - name: medai-ai-images
+          persistentVolumeClaim:
+            claimName: medai-ai-images
+status: {}

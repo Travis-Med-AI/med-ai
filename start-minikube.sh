@@ -1,0 +1,1 @@
+minikube start --driver=docker --apiserver-ips 127.0.0.1 --apiserver-name localhost --extra-config=apiserver.service-node-port-range=1-65535

@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (HEAD)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: results
+  name: results
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: results
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.0 (HEAD)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: results
+    spec:
+      containers:
+        - image: tclarke104/med-ai-runner-results:0.1
+          imagePullPolicy: Never
+          name: results
+          resources: {}
+          volumeMounts:
+            - mountPath: /opt/images
+              name: medai-ai-images
+      restartPolicy: Always
+      volumes:
+        - name: medai-ai-images
+          persistentVolumeClaim:
+            claimName: medai-ai-images
+status: {}

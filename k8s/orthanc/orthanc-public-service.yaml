@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (HEAD)
+  labels:
+    io.kompose.service: orthanc-public
+  name: orthanc-public
+spec:
+  type: NodePort
+  ports:
+    - name: "4243"
+      port: 4243
+      targetPort: 4242
+      nodePort: 30004
+    - name: "8043"
+      port: 8043
+      targetPort: 8042
+      nodePort: 8043
+  selector:
+    io.kompose.service: orthanc-public
+status:
+  loadBalancer: {}
