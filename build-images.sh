@@ -1,15 +1,20 @@
 #!/bin/bash
 
-cd med-ai-model
+cd med-ai-runner
 chmod +x ./build.sh
 ./build.sh
 
 cd ..
-cd med-ai-cxr-classifier
+cd med-ai-ui
 chmod +x ./build.sh
 ./build.sh
 
 cd ..
-cd med-ai-model-ptx
+cd med-ai-server
+chmod +x ./build.sh
+./build.sh
+
+
+cd ..
 chmod +x ./build.sh
 ./build.sh
