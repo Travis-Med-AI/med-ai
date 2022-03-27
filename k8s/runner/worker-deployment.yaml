@@ -25,8 +25,8 @@ spec:
         io.kompose.service: worker
     spec:
       containers:
-        - image: tclarke104/med-ai-runner-worker-nogpu:0.1
-          imagePullPolicy: Never
+        - image: tclarke104/med-ai-runner-worker:0.1
+          imagePullPolicy: IfNotPresent
           name: worker
           resources: {}
           volumeMounts:

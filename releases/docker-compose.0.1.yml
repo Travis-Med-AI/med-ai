@@ -89,7 +89,7 @@ services:
     volumes:
     - orthanc-volume:/var/lib/orthanc/db
     ports:
-    - 4243:4242
+    - 4242:4242
     - 8042:8042
 
   elasticsearch:

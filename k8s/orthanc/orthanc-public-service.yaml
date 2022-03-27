@@ -10,14 +10,14 @@ metadata:
 spec:
   type: NodePort
   ports:
-    - name: "4243"
-      port: 4243
+    - name: "4242"
+      port: 4242
       targetPort: 4242
-      nodePort: 30004
-    - name: "8043"
-      port: 8043
+      nodePort: 4242
+    - name: "8042"
+      port: 8042
       targetPort: 8042
-      nodePort: 8043
+      nodePort: 8042
   selector:
     io.kompose.service: orthanc-public
 status:

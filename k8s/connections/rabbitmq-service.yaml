@@ -9,16 +9,20 @@ metadata:
     io.kompose.service: rabbitmq
   name: rabbitmq
 spec:
+  type: NodePort
   ports:
     - name: "5672"
       port: 5672
       targetPort: 5672
+      nodePort: 5672
     - name: "15671"
       port: 15671
       targetPort: 15671
+      nodePort: 15671
     - name: "15672"
       port: 15672
       targetPort: 15672
+      nodePort: 15672
   selector:
     io.kompose.service: rabbitmq
 status:
