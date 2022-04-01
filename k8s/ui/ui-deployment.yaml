@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - image: tclarke104/med-ai-ui:0.1
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: ui
           ports:
             - containerPort: 4200

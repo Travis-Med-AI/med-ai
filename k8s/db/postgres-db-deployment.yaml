@@ -31,7 +31,7 @@ spec:
             - name: POSTGRES_USER
               value: test
           image: tclarke104/med-ai-db:0.1
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: postgres-db
           ports:
             - containerPort: 5432

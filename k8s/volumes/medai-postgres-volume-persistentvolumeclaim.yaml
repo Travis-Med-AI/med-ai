@@ -6,6 +6,7 @@ metadata:
     io.kompose.service: medai-postgres-volume
   name: medai-postgres-volume
 spec:
+  storageClassName: ai-storage
   accessModes:
     - ReadWriteOnce
   resources:

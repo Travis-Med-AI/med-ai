@@ -9,6 +9,8 @@ metadata:
   name: orthanc-public
 spec:
   type: NodePort
+  externalIPs:
+    - 192.168.10.3
   ports:
     - name: "4242"
       port: 4242

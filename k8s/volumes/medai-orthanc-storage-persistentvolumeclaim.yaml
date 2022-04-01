@@ -6,6 +6,7 @@ metadata:
     io.kompose.service: medai-orthanc-storage
   name: medai-orthanc-storage
 spec:
+  storageClassName: ai-storage
   accessModes:
     - ReadWriteOnce
   resources:

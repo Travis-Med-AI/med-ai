@@ -36,7 +36,7 @@ spec:
             - name: REDIS_HOST
               value: redis
           image: tclarke104/med-ai-server:0.1
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: server
           ports:
             - containerPort: 8000

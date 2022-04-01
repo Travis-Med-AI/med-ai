@@ -9,6 +9,8 @@ metadata:
   name: server
 spec:
   type: NodePort
+  externalIPs:
+    - 192.168.10.2
   ports:
     - name: "8000"
       port: 8000

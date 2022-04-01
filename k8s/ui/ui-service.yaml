@@ -8,6 +8,8 @@ metadata:
     io.kompose.service: ui
   name: ui
 spec:
+  externalIPs:
+    - 192.168.10.1
   type: NodePort
   ports:
     - name: "4200"

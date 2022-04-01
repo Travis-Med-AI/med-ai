@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - image: tclarke104/med-ai-runner-results:0.1
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           name: results
           resources: {}
           volumeMounts:
