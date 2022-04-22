@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - image: tclarke104/med-ai-runner-worker:0.1
-          imagePullPolicy: Always
+          ImagePullPolicy: Never
           name: worker
           resources: {}
           volumeMounts:

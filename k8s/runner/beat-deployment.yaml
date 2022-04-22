@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - image: tclarke104/med-ai-runner-beat:0.1
-          imagePullPolicy: Always
+          ImagePullPolicy: Never
           name: beat
           resources: {}
           volumeMounts:
